@@ -1,6 +1,9 @@
 <?php
-include '../Control/users.php';
-$users=getUsers()
+include_once '../Control/users.php';
+require_once '../Control/products.php';
+$products = getAllProducts();
+session_start();
+$current_user = $_SESSION['current_user'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,29 +11,38 @@ $users=getUsers()
 
 </head>
 <body>
+<a href="seller_dash.php">Go Back</a>
+<br>
+<a href="create_product.php">Add New Product</a>
 
 <h2>Product Table</h2><hr>
-
-<table>
+<?= $current_user ?>
+<table border="1">
   <tr>
-    <th><h3><pre>Product Name                   Description                   Price                   Brand                   Catagory</pre></h3></th>
-    <!-- <th></th>
-    <th></th>
-  </tr> -->
+    <th>Product ID</th>
+    <th>Product Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Brand</th>
+    <th>Catagory</th>
+    <th>Actions</th>
 </tr>
-<?php foreach($users as $user):?>
-   
-<tr>
-    <td><?php echo $user['Product_tittle']?></td>
-    <td><?php echo $user['Full_description']?></td>
-    <td><?php echo $user['Pricing']?></td>
-    <td><?php echo $user['Brand_name']?></td>
-    <td><?php echo $user['Catagory']?></td>
-    
-  </tr> 
-  <tbody>
-  <?php endforeach;;?> 
-  <tbody>
+<?php foreach($products as $product) {?>
+  <tr>
+    <td><?php echo $product['ID'] ?></td>
+    <td><?php echo $product['Product_tittle'] ?></td>
+    <td><?php echo $product['Full_description'] ?></td>
+    <td><?php echo $product['Pricing'] ?></td>
+    <td><?php echo $product['Brand_name'] ?></td>
+    <td><?php echo $product['Catagory'] ?></td>
+    <td>
+      <a href="#">View</a>
+      <a href="#">Update</a>
+      <a href="#">Delete</a>
+    </td>
+  </tr>
+<?php } ?>
+
 </table>
  
 </body>

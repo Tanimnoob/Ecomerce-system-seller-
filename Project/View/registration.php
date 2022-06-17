@@ -24,10 +24,10 @@ include "../Control/process_r.php"
                   
               </tr> 
               <tr>
-                <td> <label for="age">Age:</label> </td>
-                <td> <input type="number" id="age" name="age"> 
+                <td> <label for="DateOfBirth">Date Of Birth:</label> </td>
+                <td> <input type="date" id="DateOfBirth" name="DateOfBirth"> 
                 <?php
-                  echo $ageerr;
+                  echo $DateOfBirtherr;
                   ?></td>
             </tr>
             <tr>
@@ -44,7 +44,7 @@ include "../Control/process_r.php"
             </tr>
            
             <tr>
-                <td> <label for="company">Company:</label> </td>
+                <td> <label for="company">Shop Name:</label> </td>
                 <td> <input type="text" id="company" name="company"> 
                 <?php
                   echo $companyeerr;
@@ -109,13 +109,13 @@ include "../Control/process_r.php"
          <tr>
           <br>
             
-        <td><input type="submit" name="Submit" value="Submit Form">
-       <tr>
+        <td><input type="submit" name="Submit" value="Submit Form"></td>
 </tr>
 <tr>
-          
+      <td><td><h3>If you are already Registrated you can login, <a href="login.php">Click here!</a><h3></td></td>
+       
+</tr>
 
-       </tr>
 
        <tr>
          <td>

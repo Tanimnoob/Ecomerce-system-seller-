@@ -1,65 +1,26 @@
 [
     {
-        "Product tittle   :": "Shoes",
-        "Full description :": " serter\r\neryerhtr\r\ntryrytr\r\ntyt",
-        "Pricing          :": "1213",
-        "Brand name       :": "Toms",
-        "Catagory         :": "Sports"
+        "Product_tittle": "Frezze",
+        "Full_description": "It will save your electriciy",
+        "Pricing": "25000",
+        "Brand_name": "Walton",
+        "Catagory": "Electronics",
+        "ID": 1
     },
     {
-        "Product tittle   :": "weewewewe",
-        "Full description :": " erefed\r\nededefd\r\nefefef\r\nefefefe",
-        "Pricing          :": "1200",
-        "Brand name       :": "Toms",
-        "Catagory         :": "Books"
+        "Product_tittle": "Football",
+        "Full_description": "Football, also called association football or soccer, is a game involving two teams of 11 players who try to maneuver the ball into the other team\u2019s goal without using their hands or arms. The team that scores more goals wins. Football is the world\u2019s most popular ball game in numbers of participants and spectators.",
+        "Pricing": "3000",
+        "Brand_name": "Nike",
+        "Catagory": "Sports",
+        "ID": 2
     },
     {
-        "Product tittle   :": "Shoes",
-        "Full description :": " fefef\r\neerfef\r\nefef\r\nefef",
-        "Pricing          :": "003",
-        "Brand name       :": "ghhghhgghhgghhg",
-        "Catagory         :": "Clothes"
-    },
-    {
-        "Product tittle   :": "Shoes",
-        "Full description :": " ",
-        "Pricing          :": "004",
-        "Brand name       :": "Toms",
-        "Catagory         :": "Clothes"
-    },
-    {
-        "Product tittle   :": "Shoes",
-        "Full description :": "",
-        "Pricing          :": "12333",
-        "Brand name       :": "Toms",
-        "Catagory         :": "Clothes"
-    },
-    {
-        "Product tittle   :": "Shoes",
-        "Full description :": " ddsdsd\r\ns",
-        "Pricing          :": "12121",
-        "Brand name       :": "Toms",
-        "Catagory         :": "Clothes"
-    },
-    {
-        "Product_tittle": "Shoes",
-        "Full_description": " fsfdd\r\ndfdfdf\r\ndfdf\r\ndf",
-        "Pricing": "1200",
-        "Brand_name": "Toms",
-        "Catagory": "Clothes"
-    },
-    {
-        "Product_tittle": "Shoes",
-        "Full_description": " sdswd\r\nedde",
-        "Pricing": "1200",
-        "Brand_name": "Toms",
-        "Catagory": "Books"
-    },
-    {
-        "Product_tittle": "Shoeserr",
-        "Full_description": " ere\r\nre\r\ne\r\nfeef",
-        "Pricing": "12233",
-        "Brand_name": "Toms",
-        "Catagory": "Smartphones"
+        "Product_tittle": "Facewash",
+        "Full_description": "Bamboo Charcoal men facewash",
+        "Pricing": "320",
+        "Brand_name": "Clariss",
+        "Catagory": "Others",
+        "ID": 3
     }
 ]

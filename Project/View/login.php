@@ -1,40 +1,71 @@
+
 <?php
-include "../Control/process_r.php"
+$errors = array();
+
+$existingdata=file_get_contents('../Data/remembered.json');
+$tempJSONdata = json_decode($existingdata, true);
+if (isset($tempJSONdata[0])) {
+    if (isset($tempJSONdata[0]['user']['username']) && isset($tempJSONdata[0]['user']['password'])) {
+        $username = $tempJSONdata[0]['user']['username'];
+        $password = $tempJSONdata[0]['user']['password'];
+        
+        require_once '../Control/users.php';
+        $user = findUser($username);
+        if ($user) {
+            if ($user['Password'] === $password) {
+                session_start();
+                $_SESSION['current_user'] = $username;
+                setcookie('current_user', $username, time() + 1800);
+                header('location: ../View/seller_dash.php');
+            }
+        }
+    }
+}
+include_once '../Control/login_validation.php';
 ?>
-
-
 <html>
-    <head>
-        <h2>Log In</h2> <hr> 
-    </head>
-    <body>
-        <form action=""  method="post" >
-            <table>
-              <tr>
-                  <td> <label for="fname">First name:</label></td>
-                  <td> <input type="text" id="fname" name="fname" required>
-                  
-                  </td>
-                  
-              </tr> 
-              <tr>
-              <td> <label for="password">Password:</label> </td>
-              <td> <input type="password" id="password" name="password" required> 
-
-                  </td>
-                  <td><input type="submit" name="login" value="login">
-                  </td>
-                 
-                  
-              </tr> 
-                  <tr>
-                  <td> <a href="http://localhost/project/View/registration.php"><h4>If you want to create account?,signup!</h4></a></td>
-                 
-                  </td>
-                  <tr>
-</td>
-                  <?php
-                  echo $logerr;
-                   ?></td>
-                   </tr>
-                  
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <center>
+    <h1>Login</h1>
+<hr>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td>
+                    <input type="text" name="username" placeholder="Enter First Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" name="password" placeholder="Enter Password">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="remember" id="remember"></td>
+                <td>Remember Me</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Log In">
+                </td>
+                <td>
+                    Don't have an account, <a href="registration.php">Sign Up</a>?
+                </td>
+            </tr>
+        </table>
+    </form>
+    <?php
+        if (count($errors) > 0) {
+            foreach ($errors as $error) { ?>
+                <p><?php echo $error ?></p>
+    <?php        }
+        }
+    ?>
+</center>
+</body>
+</html>
