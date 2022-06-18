@@ -3,7 +3,6 @@
 $fname = $lname = $company = $DateOfBirth = $pass = $phn = $email = $id = $add = $comment = $image = "";
 $fnameerr = $lnameerr = $companyeerr = $DateOfBirtherr = $passerr = $iderr=$logerr= $cpasserr = $phoneerr = $emailerr = $comerr = $gendererr = $adderr = $fileerr = $dataerr = "";
 $count = 0;
-//$id=0;
 
 if (isset($_POST["Submit"])) {
 
@@ -56,7 +55,7 @@ if (isset($_POST["Submit"])) {
     if (empty($pass) || strlen($pass) < 3||is_numeric($pass
     )) {
 
-        $passerr = "->please enter a password upto 8 letter/character";
+        $passerr = "->please enter a password upto 3 letter/character";
     } else {
         $count++;
         $passerr = "->your password is " . $pass;
@@ -67,8 +66,7 @@ if (isset($_POST["Submit"])) {
         $count++;
         $cpasserr = "->your password is confirmed " . $cpass;
     }
-    // else if(empty($cpass)|| (strlen($cpass)<8)||($pass!=$cpass)){
-    else { //if(empty($cpass) || strlen($cpass)<8){
+    else { 
         $cpasserr = "->Please match password! ";
     }
 
@@ -118,8 +116,6 @@ if (isset($_POST["Submit"])) {
 
     if ($count == 12) {
 
-        //$id=$id+$filereadphp;
-        //$filereadphp=$filereadphp+$id;
         $formdata = array(
             'First_Name' => $fname,
             'Last_Name' => $lname,
@@ -133,17 +129,12 @@ if (isset($_POST["Submit"])) {
             'Phone' => $phn,
             'Message_(if any)' => $comment,
             'Address' => $add,
-            //'id' => "1"//++$last_item_id,
-
-
-
 
 
         );
 
         $existingdata = file_get_contents('../Data/users.json');
-        // $existingdata = file_get_contents('data.json');
-        $tempJSONdata = json_decode($existingdata);//cut true
+        $tempJSONdata = json_decode($existingdata);
 
        
        
@@ -157,11 +148,6 @@ if (isset($_POST["Submit"])) {
             $dataerr = "No data saved";
         }
 
-
-    //$id=$_POST["id"];
-    //$fileread=file_get_contents("../Data/data_r.json");
-    //$filereadphp=json_decode($fileread);
-    //echo $filereadphp[11]->ID;
 }
 
 $customer_data = file_get_contents('../Data/users.json');
