@@ -68,5 +68,19 @@
         "Phone": "01815069199",
         "Message_(if any)": "Nothing to say",
         "Address": "manikganj"
+    },
+    {
+        "First_Name": "Ruksana",
+        "Last_Name": "Inty",
+        "Image": "th (2).jpeg",
+        "DateOfBirth": "2022-06-24",
+        "Gender": "Female",
+        "Company": "E-shop",
+        "Email": "ruk@gmail.com",
+        "Password": "12qw",
+        "cPassword": "12qw",
+        "Phone": "01925069199",
+        "Message_(if any)": " ",
+        "Address": "Dhaka"
     }
 ]

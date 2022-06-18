@@ -1,5 +1,5 @@
  <?php
-include "../Control/process_r.php"
+include_once "../Controller/process_r.php"
 ?>
 
 

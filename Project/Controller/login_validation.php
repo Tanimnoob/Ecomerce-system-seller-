@@ -9,10 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!strlen($password) > 0 || !strlen($password) >= 3) {
         $errors[] = "Password must be above or equal to 3 characters";
     }
-    // if ($password != $user['Password'])
-    // {
-    //     $errors[] = "Please enter valid information";
-    // }
     if (strlen($username) > 0 && strlen($password) > 0 && strlen($password) >= 3) {
         require_once 'users.php';
         $user = findUser($username);
@@ -31,10 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header('location: ../View/seller_dash.php');
             }
         }
-    }
-    else 
-    {
-        $errors[] = "Please enter valid information";
     }
 }
 

@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once '../Control/users.php';
+require_once '../Controller/users.php';
 $user = findUser($_SESSION['current_user']);
 if (!$user) {
     header('location: login.php');
@@ -21,7 +21,7 @@ if (!$user) {
         <img style="width: 21rem;" src="../File/<?php echo $user['Image'] ?>" alt="Profile Pic">
     <?php } ?>
         <br>
-        <a href="../Control/logout.php">Logout</a>
+        <a href="../Controller/logout.php">Logout</a>
         <br>
         <a href="create_product.php">Add Products</a>
         <br>

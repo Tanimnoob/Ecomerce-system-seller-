@@ -1,5 +1,5 @@
 <?php
-include "../Control/process_p.php"
+include "../Controller/process_p.php"
 ?>
 
 

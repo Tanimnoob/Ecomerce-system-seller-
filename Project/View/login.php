@@ -9,7 +9,7 @@ if (isset($tempJSONdata[0])) {
         $username = $tempJSONdata[0]['user']['username'];
         $password = $tempJSONdata[0]['user']['password'];
         
-        require_once '../Control/users.php';
+        require_once '../Controller/users.php';
         $user = findUser($username);
         if ($user) {
             if ($user['Password'] === $password) {
@@ -21,7 +21,7 @@ if (isset($tempJSONdata[0])) {
         }
     }
 }
-include_once '../Control/login_validation.php';
+include_once '../Controller/login_validation.php';
 ?>
 <html>
 <head>

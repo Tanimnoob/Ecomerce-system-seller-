@@ -1,6 +1,6 @@
 <?php
-include_once '../Control/users.php';
-require_once '../Control/products.php';
+include_once '../Controller/users.php';
+require_once '../Controller/products.php';
 $products = getAllProducts();
 session_start();
 $current_user = $_SESSION['current_user'];

@@ -22,5 +22,29 @@
         "Brand_name": "Clariss",
         "Catagory": "Others",
         "ID": 3
+    },
+    {
+        "Product_tittle": "CD",
+        "Full_description": "This is a gaming concole cd",
+        "Pricing": "200",
+        "Brand_name": "None",
+        "Catagory": "Sports",
+        "ID": 4
+    },
+    {
+        "Product_tittle": "Meat(cow)",
+        "Full_description": "Bramhan meat ",
+        "Pricing": "1300",
+        "Brand_name": "NONE",
+        "Catagory": "Others",
+        "ID": 5
+    },
+    {
+        "Product_tittle": "Pricess",
+        "Full_description": "Imported from ireland",
+        "Pricing": "30000",
+        "Brand_name": "Solfyna",
+        "Catagory": "Clothes",
+        "ID": 6
     }
 ]
