@@ -1,0 +1,103 @@
+ #flip {  
+    cursor: pointer;
+    padding: 15px;  
+    text-align: center;
+    color:white;
+    text-shadow: 2px 2px 5px rgb(50, 227, 216);
+    font-size:20px;
+    font-family:sans-serif;  
+    background-color: rgb(118, 97, 237);  
+    border: solid 1px #fff;  
+} 
+#panel {  
+    padding: 15px;  
+    text-align: justify;
+    font-size:18px;
+    color:white;  
+    background-color: #6cdabf;  
+    border: solid 1px #fff;  
+    text-decoration: none;
+}  
+#panel1 {  
+    padding: 15px;  
+    text-align: justify; 
+    font-size:18px;
+    color:white; 
+    background-color: rgb(242, 247, 245);  
+    border: solid 1px #c3c3c3; 
+    text-decoration: none; 
+} 
+#panel2 {  
+    padding: 15px; 
+    text-align: justify;  
+    font-size:18px;
+    text-decoration: none;
+    color:white;
+    background-color: #6cdabf;  
+    border: solid 1px #fff;  
+    text-decoration: none;
+} 
+#panel3 {  
+    padding: 15px;  
+    text-decoration: none;
+    text-align: justify;
+    font-size:18px; 
+    color:white; 
+    background-color: rgb(242, 247, 245);  
+    border: solid 1px #c3c3c3;  
+    text-decoration: none;
+} 
+#panel {  
+    padding: 30px; 
+    
+    display:none; 
+   
+}
+#panel1 {  
+    padding: 30px;  
+    display:none; 
+   
+}
+#panel2 {  
+    padding: 30px;  
+   
+       display:none;  
+}
+#panel3 {  
+    padding: 30px;  
+    display:none;  
+  
+}
+#panel a{
+    text-decoration: none;
+    color:white; 
+    font-weight: bold;
+}
+#panel2 a{
+    text-decoration: none;
+    color:white; 
+    font-weight: bold;
+}
+#panel1 a{
+    text-decoration: none;
+    color: rgb(70, 67, 67); 
+    font-weight: bold;
+}
+#panel3 a{
+    text-decoration: none;
+    color:rgb(70,67,67); 
+    font-weight: bold;
+}
+
+.design{
+    padding: 15px;  
+    text-align: left;
+    color:rgb(234, 241, 247);
+    text-shadow: 2px 2px 5px rgb(73, 2, 74);
+    font-size:30px;
+    font-family: 'Times New Roman';  
+    text-transform: capitalize;
+    /* background-color: rgb(118, 97, 237);  
+    border: solid 1px #fff;   */
+}
+

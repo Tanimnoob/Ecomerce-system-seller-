@@ -1,103 +1,105 @@
 <?php
-include "../Controller/process_p.php"
+include "../Control/process_p.php"
 ?>
 
-
+<!DOCTYPE html>
 <html>
-    <head>
-        <h2>Create Product</h2> <hr> 
-    </head>
+    <head> 
+    <link rel= "stylesheet"  type="text/css" href="../Css/product_create.css?v=1" >  
+    <div class="navbar">
+  <div class="fixed">
+    <ul>
+  <li>  <a href="seller_dash.php">Go Back</a> 
+    </ul>
+</div>
+  </div>
+  </head>
     <body>
-        <a href="seller_dash.php">Go Back</a>
+    <div class="regform"><h1>Create Product</h1></div> 
+    <div class="main">
+       
         <form action=""  method="post" enctype="multipart/form-data">
-            <table>
-              <tr>
-                  <td> <label for="ptittle">Product tittle:</label></td>
-                  <td> <input type="text" id="ptittle" name="ptittle">
+        
+          <form>
+              <div id="name"> 
+              <label for="ptittle"><div class="name">Product tittle:</div></label>
+               <input type="text" id="ptittle" class="firstname" name="ptittle">
                   <?php
                   echo $ptittleerr;
                   ?>
                  
-                  </td>
+                 
                   
-              </tr> 
-              <tr>
+              
           
-          <td><label for="description">Full description:</label></td>
-         <td><textarea id="description" id="description" name="description" rows="4" cols="50"> </textarea>
+          <label for="description"><div class="name">Full description:</div></label>
+         <textarea  id="description" name="description" class="company "> </textarea>
              <?php
                   echo $deserr;
-                  ?></td>
-          </tr>
+                  ?>
+          
 
-              <tr>
-                <td> <label for="price">Pricing:</label> </td>
-                <td> <input type="number" id="price" name="price"> 
+              
+          <div class="name">     <label for="price">Pricing:</label> </div>
+                 <input type="number" id="price" class="email" name="price"> 
                 <?php
                   echo $priceerr;
-                  ?></td>
-            </tr>
-            <tr>
-                <td> <label for="brand">Brand name:</label> </td>
-                <td> <input type="text" id="brand" name="brand"> 
+                  ?>
+          
+          <div class="name"> <label for="brand">Brand name:</label> </div>
+                <input type="text" id="brand" class="code" name="brand"> 
                 <?php
                   echo $branderr;
-                  ?></td>
+                  ?>
            
-            <tr>
-            <tr>
-                <td> <label for="catagory"> Catagory:</label> </td>
-                <td><input type="radio" id="Clothes" name="catagory" value="Clothes">
-                <label for="catagory">Clothes</label>
-                <input type="radio" id="Smartphones" name="catagory" value="Smartphones">
-                <label for="catagory">Smartphones</label>
-                <input type="radio" id="Sports" name="catagory" value="Sports">
-                <label for="catagory">Sports</label> 
-                <input type="radio" id="Books" name="catagory" value="Books">
-                <label for="catagory">Books</label> 
-                <input type="radio" id="Automobile" name="catagory" value="Automobile">
-                <label for="catagory">Automobile</label> 
-                <input type="radio" id="Electronics" name="catagory" value="Electronics">
-                <label for="catagory">Electronics</label> 
-                <input type="radio" id="Sports" name="catagory" value="Sports">
-                <label for="catagory">Sports</label> 
-                <input type="radio" id="Others" name="catagory" value="Others">
-                <label for="catagory">Others</label> 
+        
+           <div class="name"> <label for="catagory"> Catagory:</label> </td></div>
+                <input class="radio-one" type="radio" id="Clothes" name="catagory" value="Clothes">
+                <label class="radio"  for="catagory">Clothes</label>
+                <input class="radio-one" type="radio" id="Smartphones" name="catagory" value="Smartphones">
+                <label class="radio" for="catagory">Smartphones</label>
+                <input class="radio-one" type="radio" id="Sports" name="catagory" value="Sports">
+                <label class="radio" for="catagory">Sports</label> 
+                <input class="radio-one" type="radio" id="Books" name="catagory" value="Books">
+                <label class="radio" for="catagory">Books</label> <br>
+                <input class="radio-one" type="radio" id="Automobile" name="catagory" value="Automobile">
+                <label class="radio" for="catagory">Automobile</label> 
+                <input class="radio-one" type="radio" id="Electronics" name="catagory" value="Electronics">
+                <label class="radio" for="catagory">Electronics</label> 
+                <input class="radio-one" type="radio" id="Sports" name="catagory" value="Sports">
+                <label class="radio" for="catagory">Sports</label> 
+                <input class="radio-one" type="radio" id="Others" name="catagory" value="Others">
+                <label class="radio" for="catagory">Others</label> 
+                    
                     <?php
                   echo $catagoryerr;
-                  ?></td>
-            </tr>
+                  ?>
+            
         
         
           
-          <td>Media :</td>
-         <td><input name="upload[]" type="file" multiple="multiple" />
+            <div class="name">   Media :</div>
+         <input name="upload[]" type="file" multiple="multiple"  class="file"/>
              <?php
                   echo $fileerr;
-                  ?></td>
-          </tr>
+                  ?>
+         
  
          
-         <tr>
-          <br>
+        
+          
             
-        <td><input type="submit" name="Submit" value="Save product">
-       <tr>
-</tr>
-       </tr>
+          <input type="submit" name="Submit" value="Upload"  class="btn">
+       
 
-       <tr>
-         <td></td>
-         <td>
+      
          <?php
                   echo $dataperr;
                   ?>
 
-         </td>
-
-
-       </tr>
+       
             </table>
+</form>
         </form>
 
     </body>

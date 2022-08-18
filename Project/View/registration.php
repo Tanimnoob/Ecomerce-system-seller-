@@ -1,136 +1,141 @@
  <?php
-include_once "../Controller/process_r.php"
+include "../Control/process_r.php"
 ?>
-
-
+<!DOCTYPE html>
 <html>
     <head>
-        <h2>Seller Registration</h2> <hr> 
+      
+      <link rel= "stylesheet"  type="text/css" href="../Css/registration.css" />
+        
     </head>
+    
     <body>
-        <form action=""  method="post" enctype="multipart/form-data">
-            <table>
-              <tr>
-                  <td> <label for="fname">First name:</label></td>
-                  <td> <input type="text" id="fname" name="fname">
+      <div class="signup-box">
+      <h1>Seller Registration</h1>
+      <form action="" onsubmit="return check_form()"  method="post" enctype="multipart/form-data">
+              
+                   <label for="fname">First name:</label>
+                   <input type="text" id="fname" name="fname" onkeyup="check_fname()">
+                   <p id="fname_error"></p>
                   <?php
                   echo $fnameerr;
                   ?>
                    <label for="lname">Last name:</label> 
-                  <input type="text" id="lname" name="lname">
+                  <input type="text" id="lname" name="lname" onkeyup="check_lname()">
+                  <p id="lname_error"></p>
                   <?php
                   echo $lnameerr;
-                  ?></td>
+                  ?>
                   
-              </tr> 
-              <tr>
-                <td> <label for="DateOfBirth">Date Of Birth:</label> </td>
-                <td> <input type="date" id="DateOfBirth" name="DateOfBirth"> 
+             
+                 <label for="DateOfBirth">Date Of Birth:</label> 
+                 <input type="date" id="BOD" name="BOD" onchange="check_birthday()">
+                 <p id="birthday_error"></p> 
                 <?php
                   echo $DateOfBirtherr;
-                  ?></td>
-            </tr>
-            <tr>
-                <td> <label for="gender">Gender:</label> </td>
-                <td><input type="radio" id="male" name="gender" value="Male">
-                <label for="gender">Male</label>
-                <input type="radio" id="female" name="gender" value="Female">
-                <label for="gender">Female</label>
-                <input type="radio" id="others" name="gender" value="others">
-                <label for="gender">Others</label> 
-                    <?php
+                  ?>
+                 
+                 <label for="gender" >Gender:</label>
+          <label for="gender" class="radio">
+          <input type="radio" id="male" name="gender" class="radio__input" value="Male" onchange="check_gender()"/>
+          <div class ="radio__radio"></div> 
+          Male</label>
+              
+
+          <label for="gender" class="radio">
+          <input type="radio" id="female" name="gender" class="radio__input" value="Female"onchange="check_gender()"/></td>
+          <div class ="radio__radio"></div> 
+          Female</label>     
+
+          <label for="gender" class=radio>
+            <input type="radio" id="others" name="gender" class="radio__input" value="others"onchange="check_gender()"/>
+            <div class ="radio__radio"></div> 
+          others</label>  
+          <p id="gender_error"></p>
+                   <?php
                   echo $gendererr;
-                  ?></td>
-            </tr>
+                  ?>
+    
            
-            <tr>
-                <td> <label for="company">Shop Name:</label> </td>
-                <td> <input type="text" id="company" name="company"> 
+                <label for="company">Company:</label> 
+                  <input type="text" id="company" name="company" onkeyup="check_company()">
+                 <p id="company_error"></p>
                 <?php
                   echo $companyeerr;
-                  ?></td>
+                  ?>
            
-            <tr>
-                <td> <label for="email">Email:</label> </td>
-                <td> <input type="text" id="email" name="email"> 
+            
+                 <label for="email">Email:</label> 
+                 <input type="text" id="email" name="email" onkeyup="check_email()"> 
+                 <p id="email_error"></p>
                 <?php
                   echo $emailerr;
-                  ?></td>
-            </tr> 
-           <tr>
-              <td> <label for="password">Password:</label> </td>
-              <td> <input type="password" id="password" name="password" > 
+                  ?>
+           
+               <label for="password">Password:</label> 
+               <input type="password" id="password" name="password" onkeyup="check_password()"> 
+               <p id="password_error"></p>
               <?php
                   echo $passerr;
-                  ?></td>
-          </tr> 
-          <tr>
-              <td> <label for="cpassword">Confirm Password:</label> </td>
-              <td> <input type="password" id="cpassword" name="cpassword"> 
+                  ?>
+          
+               <label for="cpassword">Confirm Password:</label>
+              <input type="password" id="cpassword" name="cpassword" onkeyup="check_confirm_password()"> 
+              <p id="cp_error"></p>
               <?php
                   echo $cpasserr;
-                  ?></td>
-          </tr> 
+                  ?>
+           
          
-          </tr> 
-          <tr>
-                <td> <label for="phone">Phone:</label> </td>
-                <td> <input type="tel" id="phone" name="phone"  pattern="^\d{11}$" > 
+        
+                 <label for="phone">Phone:</label> 
+                 <input type="tel" id="phone" name="phone" onkeyup="check_phone()" > 
+                 <p id="phone_error"></p>
                 <?php
                   echo $phoneerr;
-                  ?></td>
+                  ?>
          
-</tr>
-<tr>
-                <td> <label for="address">Address:</label> </td>
-                <td> <input type="text" id="address" name="address"   > 
-                <?php
+
+                 <label for="address">Address:</label> 
+                 <input type="text" id="address" name="address" onkeyup="check_address()" > 
+                 <p id="address_error"></p>
+               <?php
                   echo $adderr;
-                  ?></td>
+                  ?>
          
-</tr>
-          
-          <td>Please submit your photo :</td>
-         <td><input type="file" name="myfile">
-             <?php
-                  echo $fileerr;
-                  ?></td>
-          </tr>
- 
-          <tr>
-          
-          <td><label for="comment">Message (if any):</label></td>
-         <td><textarea id="comment" name="comment" rows="4" cols="50"> </textarea>
-             <?php
-                  echo $comerr;
-                  ?></td>
-          </tr>
 
-         <tr>
-          <br>
-            
-        <td><input type="submit" name="Submit" value="Submit Form"></td>
-</tr>
-<tr>
-      <td><td><h3>If you are already Registrated you can login, <a href="login.php">Click here!</a><h3></td></td>
+          
+         <label > Please submit your photo :</label>
+         <input type="file" id="file" name="myfile"onkclick="check_file()">
+         <p id="file_error"></p>
+            <?php
+                echo $fileerr;
+                  ?>
        
-</tr>
-
-
-       <tr>
-         <td>
-         </td>
-         <td>
+          
+          <label for="comment">Message (if any):</label>
+         <textarea id="comment" name="comment" rows="4" cols="50"> </textarea>
+             <?php
+               echo $comerr;
+                  ?>
+                
+                
+        <labe></label>
+           
+        <input type="submit" name="Submit" class="btn" value="Submit Form">
          <?php
                   echo $dataerr;
                   ?>
 
-         </td>
-
-
-       </tr>
-            </table>
-        </form>
-
+     
+           
+      </form>
+<p>By clicking the Sign Up button,you agree to our <br>
+<a href="condition.php" >Term and Condition</a> and <a href='condition.php' >Policy & Privacy</a>
+</p>
+</div>
+  <p class="para-2">If you are already Registrated you can login, <a href="login.php">Click here!</a></p>
+  <p id= "errorform"></p>
+  <script src="../Js/registration_script.js"></script>
     </body>
 </html>

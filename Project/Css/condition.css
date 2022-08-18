@@ -1,0 +1,8 @@
+p {outline-color:red;}
+
+p.solid  {outline-style: solid;}
+.solid{
+    
+    text-align: center;
+    outline-width: 0.5px;
+}
